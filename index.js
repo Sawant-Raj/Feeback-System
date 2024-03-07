@@ -1,7 +1,12 @@
 function handleFormSubmit(event) {
     event.preventDefault();
-
     let count = 0;
+
+    function updateStarCount(starElement, count) {
+        starElement.textContent = count + 1;
+    }
+
+
 
     const star1 = document.getElementById("star1");
     const star2 = document.getElementById("star2");
@@ -23,15 +28,26 @@ function handleFormSubmit(event) {
         .catch((error) => console.log(error));
 
     if (feedbackDetails.rating == 1)
-        star1.textContent = ++count;
+        updateStarCount(star1, parseInt(star1.textContent));
     if (feedbackDetails.rating == 2)
-        star2.textContent = ++count;
+        updateStarCount(star2, parseInt(star2.textContent));
     if (feedbackDetails.rating == 3)
-        star3.textContent = ++count;
+        updateStarCount(star3, parseInt(star3.textContent));
     if (feedbackDetails.rating == 4)
-        star4.textContent = ++count;
+        updateStarCount(star4, parseInt(star4.textContent));
     if (feedbackDetails.rating == 5)
-        star5.textContent = ++count;
+        updateStarCount(star5, parseInt(star5.textContent));
+
+    //     if (feedbackDetails.rating == 1)
+    //     star1.textContent = ++count;
+    // if (feedbackDetails.rating == 2)
+    //     star2.textContent = ++count;
+    // if (feedbackDetails.rating == 3)
+    //     star3.textContent = ++count;
+    // if (feedbackDetails.rating == 4)
+    //     star4.textContent = ++count;
+    // if (feedbackDetails.rating == 5)
+    //     star5.textContent = ++count;
 }
 
 document.getElementById("name").value = "";
