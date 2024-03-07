@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body style="margin: 30px">
+    <h1 style="text-align: center">Feedback System</h1>
+    <h3>Overall Ratings</h3>
+
+    <div>*
+        <span id="star1" style="margin-left: 3px;">0</span>
+    </div>
+    <div>**<span id="star2" style="margin-left: 3px;">0</span></div>
+    <div>***<span id="star3" style="margin-left: 3px;">0</span></div>
+    <div>****<span id="star4" style="margin-left: 3px;">0</span></div>
+    <div>*****<span id="star5" style="margin-left: 3px;">0</span></div>
+    
+    <h3 style="margin-top: 50px;">Feedback Form</h3>
+    <form onsubmit="handleFormSubmit(event)">
+        <label for="name" class="form-label">Enter Your Name:</label>
+        <input type="text" name="name" id="name" required/>
+        <label for="category" class="form-label" style="margin-left: 10px">Choose Rating:</label>
+        <select id="rating" name="rating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <button type="submit" style="margin-left: 10px">Submit</button>
+    </form>
+    <h3 style="margin-top: 50px;">All Feedbacks</h3>
+    <ul></ul>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+<script src="index.js"></script>
+
+</html>
